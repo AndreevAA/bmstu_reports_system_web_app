@@ -1,0 +1,7 @@
+.figure-img-light{
+    /* figure */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-image: url("../../public/figure.png");
+}

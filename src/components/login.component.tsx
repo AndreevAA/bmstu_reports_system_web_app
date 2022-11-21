@@ -1,11 +1,10 @@
-import { Component } from "react";
-import { Navigate } from "react-router-dom";
+import React, { Component } from "react";
+import {Navigate, Route} from "react-router-dom";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import "../css/fonts.css";
-import "../css/buttons.css";
 
 import AuthService from "../services/auth.service";
+import Slogan from "./slogan.component";
 
 type Props = {};
 
@@ -94,60 +93,61 @@ export default class Login extends Component<Props, State> {
     };
 
     return (
-      <div className="col-md-12">
-        <div className="card card-container">
-          <img
-            src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-            alt="profile-img"
-            className="profile-img-card"
-          />
+        <div className="row">
+          <div className="col">
+            {<Slogan />}
+          </div>
+          <div className="col">
+            <div className="card card-container">
 
-          <Formik
-            initialValues={initialValues}
-            validationSchema={this.validationSchema}
-            onSubmit={this.handleLogin}
-          >
-            <Form>
-              <div className="form-group">
-                <label htmlFor="username">Username</label>
-                <Field name="username" type="text" className="form-control" />
-                <ErrorMessage
-                  name="username"
-                  component="div"
-                  className="alert alert-danger"
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="password">Password</label>
-                <Field name="password" type="password" className="form-control" />
-                <ErrorMessage
-                  name="password"
-                  component="div"
-                  className="alert alert-danger"
-                />
-              </div>
-
-              <div className="form-group">
-                <button type="submit" className="singin_button" disabled={loading}>
-                  {loading && (
-                    <span className="spinner-border spinner-border-sm"></span>
-                  )}
-                  <span>Login</span>
-                </button>
-              </div>
-
-              {message && (
-                <div className="form-group">
-                  <div className="alert alert-danger" role="alert">
-                    {message}
+              <Formik
+                  initialValues={initialValues}
+                  validationSchema={this.validationSchema}
+                  onSubmit={this.handleLogin}
+              >
+                <Form>
+                  <div className="form-group">
+                    <label htmlFor="username">Username</label>
+                    <Field name="username" type="text" className="form-control" />
+                    <ErrorMessage
+                        name="username"
+                        component="div"
+                        className="alert alert-danger"
+                    />
                   </div>
-                </div>
-              )}
-            </Form>
-          </Formik>
+
+                  <div className="form-group">
+                    <label htmlFor="password">Password</label>
+                    <Field name="password" type="password" className="form-control" />
+                    <ErrorMessage
+                        name="password"
+                        component="div"
+                        className="alert alert-danger"
+                    />
+                  </div>
+
+                  <div className="form-group singin_button">
+                    <button type="submit" className="btn" disabled={loading}>
+                      {loading && (
+                          <span className="spinner-border spinner-border-sm"></span>
+                      )}
+                      <span>SIGN IN</span>
+                    </button>
+                  </div>
+
+                  {message && (
+                      <div className="form-group">
+                        <div className="alert alert-danger" role="alert">
+                          {message}
+                        </div>
+                      </div>
+                  )}
+                </Form>
+              </Formik>
+            </div>
+          </div>
         </div>
-      </div>
+
     );
   }
 }

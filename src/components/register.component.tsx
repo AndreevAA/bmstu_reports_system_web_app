@@ -56,8 +56,8 @@ export default class Register extends Component<Props, State> {
     });
   }
 
-  handleRegister(formValue: { username: string; name: string; email: string; password: string }) {
-    const { username, name, email, password } = formValue;
+  handleRegister(formValue: { username: string; email: string; password: string }) {
+    const { username, email, password } = formValue;
 
     this.setState({
       message: "",
@@ -66,7 +66,6 @@ export default class Register extends Component<Props, State> {
 
     AuthService.register(
       username,
-      name,
       email,
       password
     ).then(
@@ -97,7 +96,6 @@ export default class Register extends Component<Props, State> {
 
     const initialValues = {
       username: "",
-      name:"",
       email: "",
       password: "",
     };
@@ -126,16 +124,6 @@ export default class Register extends Component<Props, State> {
                       name="username"
                       component="div"
                       className="alert alert-danger"
-                    />
-                  </div>
-
-                  <div className="form-group">
-                    <label htmlFor="name"> Name </label>
-                    <Field name="name" type="text" className="form-control" />
-                    <ErrorMessage
-                        name="name"
-                        component="div"
-                        className="alert alert-danger"
                     />
                   </div>
 
