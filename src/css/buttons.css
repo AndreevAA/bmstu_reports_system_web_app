@@ -1,0 +1,330 @@
+.save_button {
+    /* Property 1=Default */
+
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+
+    position: absolute;
+    width: 199px;
+    height: 49px;
+    left: 20px;
+    top: 20px;
+
+    /* button-color */
+
+    background: #F6F6F5;
+    /* button-stroke */
+
+    border: 1px solid #C8C3BD;
+    border-radius: 16px;
+}
+
+.save_button:focus {
+    /* Property 1=Variant2 */
+
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+
+    position: absolute;
+    width: 199px;
+    height: 49px;
+    left: 20px;
+    top: 89px;
+
+    /* button-clicked */
+
+    background: #F3F2F0;
+    /* button-stroke */
+
+    border: 1px solid #C8C3BD;
+    border-radius: 16px;
+}
+
+.add_a_note_button {
+    /* state=Default */
+
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+
+    position: absolute;
+    width: 199px;
+    height: 49px;
+    left: 20px;
+    top: 20px;
+
+    /* button-color */
+
+    background: #F6F6F5;
+    /* button-stroke */
+
+    border: 1px solid #C8C3BD;
+    border-radius: 16px;
+}
+
+.add_a_note_button:focus {
+    /* state=clicked */
+
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+
+    position: absolute;
+    width: 199px;
+    height: 49px;
+    left: 20px;
+    top: 89px;
+
+    /* button-clicked */
+
+    background: #F3F2F0;
+    /* button-stroke */
+
+    border: 1px solid #C8C3BD;
+    border-radius: 16px;
+}
+
+.add_a_note_button_disabled {
+    /* state=disabled */
+
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+
+    position: absolute;
+    width: 199px;
+    height: 49px;
+    left: 20px;
+    top: 158px;
+
+    /* button-clicked */
+
+    background: #F3F2F0;
+    /* button-stroke */
+
+    border: 1px solid #C8C3BD;
+    border-radius: 16px;
+}
+
+.singup_button {
+    /* state=Default */
+
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+
+    position: absolute;
+    left: 8.37%;
+    right: 8.37%;
+    top: 12.66%;
+    bottom: 56.33%;
+
+    /* button-color */
+
+    background: #F6F6F5;
+    /* button-stroke */
+
+    border: 1px solid #C8C3BD;
+    border-radius: 16px;
+}
+
+.singup_button:focus {
+    /* state=clicked */
+
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+
+    position: absolute;
+    left: 8.37%;
+    right: 8.37%;
+    top: 56.33%;
+    bottom: 12.66%;
+
+    /* button-clicked */
+
+    background: #F3F2F0;
+    /* button-stroke */
+
+    border: 1px solid #C8C3BD;
+    border-radius: 16px;
+}
+
+.singin_button {
+    /* state=Default */
+
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px;
+    gap: 10px;
+
+    position: absolute;
+    width: 199px;
+    height: 49px;
+    left: 20px;
+    top: 20px;
+
+    /* button-color */
+
+    background: #F6F6F5;
+    /* button-stroke */
+
+    border: 1px solid #C8C3BD;
+    border-radius: 16px;
+}
+
+.singup_button:hover {
+    /* state=clicked */
+
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px;
+    gap: 10px;
+
+    position: absolute;
+    width: 199px;
+    height: 49px;
+    left: 20px;
+    top: 89px;
+
+    /* button-clicked */
+
+    background: #F3F2F0;
+    /* button-stroke */
+
+    border: 1px solid #C8C3BD;
+    border-radius: 16px;
+}
+
+.edit_note_button {
+    /* state=Default */
+
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+
+    position: absolute;
+    width: 218px;
+    height: 49px;
+    left: 20px;
+    top: 20px;
+
+    /* button-color */
+
+    background: #F6F6F5;
+    /* button-stroke */
+
+    border: 1px solid #C8C3BD;
+    border-radius: 16px;
+}
+
+.edit_note_button:focus {
+    /* state=clicked */
+
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+
+    position: absolute;
+    width: 218px;
+    height: 49px;
+    left: 20px;
+    top: 89px;
+
+    /* button-clicked */
+
+    background: #F3F2F0;
+    /* button-stroke */
+
+    border: 1px solid #C8C3BD;
+    border-radius: 16px;
+}
+

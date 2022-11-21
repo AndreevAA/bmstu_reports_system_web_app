@@ -1,0 +1,229 @@
+.main_header {
+    /* h1 - main header */
+
+    width: 456px;
+    height: 59px;
+
+    /* main header caps */
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 59px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    /* primary text */
+
+    color: #333333;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.main_header_lower_case {
+    /* h2 - main header lowercase */
+
+
+    width: 556px;
+    height: 49px;
+
+    /* main header lowercase */
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 49px;
+    /* identical to box height */
+
+    text-transform: lowercase;
+
+    /* primary text */
+
+    color: #333333;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.secondary_header {
+    /* h3 - secondary header */
+
+
+    width: 360px;
+    height: 39px;
+
+    /* secondary header */
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 39px;
+    /* identical to box height */
+
+
+    /* primary text */
+
+    color: #333333;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.primary_text {
+    /* h4 - primary text */
+
+
+    width: 166px;
+    height: 26px;
+
+    /* primary text */
+
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 26px;
+
+    /* primary text */
+
+    color: #333333;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+}
+
+.primary_text_small {
+    /* h5 - primary text small */
+
+
+    width: 179px;
+    height: 22px;
+
+    /* primary text small */
+
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    /* primary text */
+
+    color: #333333;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+}
+
+.secondary_text {
+    /* h6 - secondary text */
+
+
+    width: 156px;
+    height: 22px;
+
+    /* secondary text */
+
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    text-transform: lowercase;
+
+    /* primary text */
+
+    color: #333333;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 5;
+    flex-grow: 0;
+}
+
+.secondary_text_small {
+    /* h7 - secondary text small */
+
+
+    width: 133px;
+    height: 14px;
+
+    /* secondary text small */
+
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: lowercase;
+
+    /* primary text */
+
+    color: #333333;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 6;
+    flex-grow: 0;
+}
+
+.button_text {
+    /* h8 - button text */
+
+
+    width: 230px;
+    height: 29px;
+
+    /* button text */
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+
+    /* primary text */
+
+    color: #333333;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 7;
+    flex-grow: 0;
+}
