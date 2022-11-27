@@ -1,0 +1,14 @@
+.line_edit {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 10px;
+    gap: 10px;
+    position: relative;
+    background: #F6F6F5;
+    border: 1px solid #C8C3BD;
+    border-radius: 16px;
+    height: 38px;
+}

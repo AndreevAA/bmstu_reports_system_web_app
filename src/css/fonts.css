@@ -57,12 +57,42 @@
     flex-grow: 0;
 }
 
+.main_header_lower_case {
+    /* h2 - main header lowercase */
+
+
+    width: 556px;
+    height: 49px;
+
+    /* main header lowercase */
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 49px;
+    /* identical to box height */
+
+    text-transform: lowercase;
+
+    /* primary text */
+
+    color: #737373;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
 .secondary_header {
     /* h3 - secondary header */
 
 
-    width: 360px;
-    height: 39px;
+    /*width: 360px;*/
+    /*height: 39px;*/
 
     /* secondary header */
 
@@ -81,9 +111,9 @@
 
     /* Inside auto layout */
 
-    flex: none;
-    order: 2;
-    flex-grow: 0;
+    /*flex: none;*/
+    /*order: 2;*/
+    /*flex-grow: 0;*/
 }
 
 .primary_text {
@@ -204,15 +234,15 @@
     /* h8 - button text */
 
 
-    width: 230px;
-    height: 29px;
+    /*width: 230px;*/
+    /*height: 29px;*/
 
     /* button text */
 
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 300;
-    font-size: 24px;
+    /*font-size: 24px;*/
     line-height: 29px;
     text-transform: uppercase;
 
@@ -223,7 +253,7 @@
 
     /* Inside auto layout */
 
-    flex: none;
-    order: 7;
-    flex-grow: 0;
+    /*flex: none;*/
+    /*order: 7;*/
+    /*flex-grow: 0;*/
 }

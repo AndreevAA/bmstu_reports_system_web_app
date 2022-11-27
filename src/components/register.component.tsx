@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
@@ -9,6 +9,7 @@ type Props = {};
 type State = {
   username: string,
   email: string,
+  name: string,
   password: string,
   successful: boolean,
   message: string
@@ -22,6 +23,7 @@ export default class Register extends Component<Props, State> {
     this.state = {
       username: "",
       email: "",
+      name: "",
       password: "",
       successful: false,
       message: ""
@@ -30,6 +32,16 @@ export default class Register extends Component<Props, State> {
 
   validationSchema() {
     return Yup.object().shape({
+      name: Yup.string()
+          .test(
+              "len",
+              "The username must be between 3 and 20 characters.",
+              (val: any) =>
+                  val &&
+                  val.toString().length >= 3 &&
+                  val.toString().length <= 20
+          )
+          .required("This field is required!"),
       username: Yup.string()
         .test(
           "len",
@@ -56,8 +68,8 @@ export default class Register extends Component<Props, State> {
     });
   }
 
-  handleRegister(formValue: { username: string; email: string; password: string }) {
-    const { username, email, password } = formValue;
+  handleRegister(formValue: { username: string; email: string; name: string; password: string }) {
+    const { username, email, name, password } = formValue;
 
     this.setState({
       message: "",
@@ -67,6 +79,7 @@ export default class Register extends Component<Props, State> {
     AuthService.register(
       username,
       email,
+      name,
       password
     ).then(
       response => {
@@ -97,39 +110,54 @@ export default class Register extends Component<Props, State> {
     const initialValues = {
       username: "",
       email: "",
+      name: "",
       password: "",
     };
 
     return (
-      <div className="col-md-12">
-        <div className="card card-container">
-          <img
-            src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-            alt="profile-img"
-            className="profile-img-card"
-          />
+      <div className="col-md-12 pt-5 pb-5">
+        <div className="card sign_up_form_element bg-transparent border-0 shadow-none">
 
           <Formik
             initialValues={initialValues}
             validationSchema={this.validationSchema}
             onSubmit={this.handleRegister}
           >
+
+
+
+
             <Form>
+              <h5 className="card-title text-center secondary_header pb-3 ">SIGN UP</h5>
+
               {!successful && (
                 <div>
-                  <div className="form-group">
-                    <label htmlFor="username"> Username </label>
-                    <Field name="username" type="text" className="form-control" />
-                    <ErrorMessage
-                      name="username"
-                      component="div"
-                      className="alert alert-danger"
-                    />
+                  <div className="row">
+                    <div className="col">
+                      <div className="form-group">
+                        <Field name="username" type="text" placeholder="username" className="form-control form-control line_edit" />
+                        <ErrorMessage
+                            name="username"
+                            component="div"
+                            className="alert alert-danger sign_in_form_element"
+                        />
+                      </div>
+                    </div>
+                    <div className="col">
+                      <div className="form-group">
+                        <Field name="name" type="name" placeholder="name" className="form-control form-control form-control line_edit" />
+                        <ErrorMessage
+                            name="name"
+                            component="div"
+                            className="alert alert-danger"
+                        />
+                      </div>
+                    </div>
                   </div>
 
+
                   <div className="form-group">
-                    <label htmlFor="email"> Email </label>
-                    <Field name="email" type="email" className="form-control" />
+                    <Field name="email" type="email" placeholder="email" className="form-control form-control form-control line_edit" />
                     <ErrorMessage
                       name="email"
                       component="div"
@@ -137,22 +165,42 @@ export default class Register extends Component<Props, State> {
                     />
                   </div>
 
-                  <div className="form-group">
-                    <label htmlFor="password"> Password </label>
-                    <Field
-                      name="password"
-                      type="password"
-                      className="form-control"
-                    />
-                    <ErrorMessage
-                      name="password"
-                      component="div"
-                      className="alert alert-danger"
-                    />
+                  <div className="row">
+                    <div className="col">
+                      <div className="form-group " >
+                        <Field
+                            name="password"
+                            type="password"
+                            placeholder="password"
+                            className="form-control line_edit"
+                        />
+                        <ErrorMessage
+                            name="password"
+                            component="div"
+                            className="alert alert-danger"
+                        />
+                      </div>
+                    </div>
+                    <div className="col">
+                      <div className="form-group ">
+                        <Field
+                            name="repeat_password"
+                            type="password"
+                            placeholder="repeat password"
+                            className="form-control line_edit"
+                        />
+                        <ErrorMessage
+                            name="password"
+                            component="div"
+                            className="alert alert-danger"
+                        />
+                      </div>
+                    </div>
                   </div>
 
-                  <div className="form-group">
-                    <button type="submit" className="btn btn-primary btn-block">Sign Up</button>
+
+                  <div className="form-group d-flex justify-content-center ">
+                    <button type="submit" className="btn singin_button">SIGN UP</button>
                   </div>
                 </div>
               )}

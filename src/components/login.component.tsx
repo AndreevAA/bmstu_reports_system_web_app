@@ -5,6 +5,7 @@ import * as Yup from "yup";
 
 import AuthService from "../services/auth.service";
 import Slogan from "./slogan.component";
+import {kMaxLength} from "buffer";
 
 type Props = {};
 
@@ -93,12 +94,13 @@ export default class Login extends Component<Props, State> {
     };
 
     return (
-        <div className="row">
-          <div className="col">
+        <div className="row pt-5 pb-5">
+          <div className="col-7 align-self-center">
             {<Slogan />}
           </div>
-          <div className="col">
-            <div className="card card-container">
+          <div className="col-4 ">
+            <div className="card bg-transparent border-0 shadow-none">
+              <h5 className="card-title text-center secondary_header pb-3 sign_in_form_element">SIGN IN</h5>
 
               <Formik
                   initialValues={initialValues}
@@ -106,28 +108,28 @@ export default class Login extends Component<Props, State> {
                   onSubmit={this.handleLogin}
               >
                 <Form>
-                  <div className="form-group">
-                    <label htmlFor="username">Username</label>
-                    <Field name="username" type="text" className="form-control" />
+                  <div className="form-group d-flex justify-content-center sign_in_form_element">
+                    {/*<label htmlFor="username">Username</label>*/}
+                    <Field name="username" type="text" placeholder="username" className="form-control line_edit" />
                     <ErrorMessage
                         name="username"
                         component="div"
-                        className="alert alert-danger"
+                        className="alert alert-danger sign_in_form_element"
                     />
                   </div>
 
-                  <div className="form-group">
-                    <label htmlFor="password">Password</label>
-                    <Field name="password" type="password" className="form-control" />
+                  <div className="form-group d-flex justify-content-center sign_in_form_element">
+                    {/*<label htmlFor="password">Password</label>*/}
+                    <Field name="password" type="password" placeholder="password" className="form-control line_edit" />
                     <ErrorMessage
                         name="password"
                         component="div"
-                        className="alert alert-danger"
+                        className="alert alert-danger sign_in_form_element"
                     />
                   </div>
 
-                  <div className="form-group singin_button">
-                    <button type="submit" className="btn" disabled={loading}>
+                  <div className="form-group d-flex justify-content-center sign_in_form_element">
+                    <button type="submit" className="btn singin_button" disabled={loading}>
                       {loading && (
                           <span className="spinner-border spinner-border-sm"></span>
                       )}
@@ -136,7 +138,7 @@ export default class Login extends Component<Props, State> {
                   </div>
 
                   {message && (
-                      <div className="form-group">
+                      <div className="form-group sign_in_form_element">
                         <div className="alert alert-danger" role="alert">
                           {message}
                         </div>
@@ -144,6 +146,14 @@ export default class Login extends Component<Props, State> {
                   )}
                 </Form>
               </Formik>
+              <div className="row pt-4 d-flex justify-content-center sign_in_form_element">
+                <div className="col-sm-5 ">
+                  <a href="/register" className="button_text w-100 align-content-start">SIGN UP</a>
+                </div>
+                <div className="col-sm-7 pr-0 text-right ">
+                  <a href="mailto: support@rs.com" className="pr-0 button_text ">FORGOT PASSWORD?</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

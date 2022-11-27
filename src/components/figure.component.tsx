@@ -32,10 +32,8 @@ export default class Figure extends Component<Props, State> {
         };
 
         return (
-            <div className="row">
-                <div className="figure-img-light">
-                    <img src="figure.png" className="figure-img-light" alt="sdf"/>
-                </div>
+            <div className="figure-img-light w-100 p-0 m-0">
+                <img src="http://localhost:3000/figure.png" className="figure-img-light" alt="sdf"/>
             </div>
         );
     }

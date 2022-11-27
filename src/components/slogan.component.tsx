@@ -36,9 +36,15 @@ export default class Slogan extends Component<Props, State> {
         };
 
         return (
-            <div className="col-5">
-                <img src="slogan.png" className="slogan" alt="sdf"/>
+            <div className="card-container">
+                <div className="card-title text-center">
+                    <a className="main_header">ORGANISE. SECURE. PROTECT.</a>
+                </div>
+                <div className="card-text text-center">
+                    <a className="main_header_lower_case">discipline is more important than motivation</a>
+                </div>
             </div>
+            // <img src="http://localhost:3000/slogan.png" className="slogan" alt="slogan"/>
         );
     }
 }

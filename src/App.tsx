@@ -7,6 +7,10 @@ import "./css/screen.css";
 import "./css/fonts.css";
 import "./css/buttons.css";
 import "./css/slogan.css";
+import "./css/line_edit.css";
+import "./css/sign_in.css";
+import "./css/sign_up.css";
+import "./css/side_pannel.css";
 
 import AuthService from "./services/auth.service";
 import IUser from './types/user.type';
@@ -14,7 +18,7 @@ import IUser from './types/user.type';
 import Login from "./components/login.component";
 import Register from "./components/register.component";
 import Home from "./components/home.component";
-import Profile from "./components/profile.component";
+import Profile from "./components/reports.component";
 import BoardUser from "./components/board-user.component";
 import BoardModerator from "./components/board-moderator.component";
 import BoardAdmin from "./components/board-admin.component";
@@ -22,6 +26,7 @@ import BoardAdmin from "./components/board-admin.component";
 import EventBus from "./common/EventBus";
 import Banner from "./components/banner.component";
 import Figure from "./components/figure.component";
+import ProfileBanner from "./components/profile-banner.component";
 
 type Props = {};
 
@@ -48,9 +53,9 @@ class App extends Component<Props, State> {
 
     if (user) {
       this.setState({
-        currentUser: user,
-        showModeratorBoard: user.roles.includes("ROLE_MODERATOR"),
-        showAdminBoard: user.roles.includes("ROLE_ADMIN"),
+        currentUser: user
+        // showModeratorBoard: user.roles.includes("ROLE_MODERATOR"),
+        // showAdminBoard: user.roles.includes("ROLE_ADMIN"),
       });
     }
 
@@ -74,28 +79,29 @@ class App extends Component<Props, State> {
     const { currentUser, showModeratorBoard, showAdminBoard } = this.state;
 
     return (
-      <div className="screen">
-        <div className="container mt-3">
+      <div className="screen ">
+        <div className="w-100 mt-0 pl-5 pt-3">
           <Routes>
             <Route path="/login" element={<Banner />} />
             <Route path="/register" element={<Banner />} />
+            <Route path="/reports" element={<ProfileBanner />} />
           </Routes>
         </div>
 
-        <div className="container mt-3">
+        <div className="w-100">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/profile" element={<Profile />} />
+            <Route path="/reports" element={<Profile />} />
             <Route path="/user" element={<BoardUser />} />
             <Route path="/mod" element={<BoardModerator />} />
             <Route path="/admin" element={<BoardAdmin />} />
           </Routes>
         </div>
 
-        <div className="container mt-3">
+        <div className="w-100">
           <Routes>
             <Route path="/login" element={<Figure />} />
             <Route path="/register" element={<Figure />} />
