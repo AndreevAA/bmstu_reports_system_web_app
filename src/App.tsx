@@ -11,6 +11,8 @@ import "./css/line_edit.css";
 import "./css/sign_in.css";
 import "./css/sign_up.css";
 import "./css/side_pannel.css";
+import "./css/banner.css";
+import "./css/reports_body.css";
 
 import AuthService from "./services/auth.service";
 import IUser from './types/user.type';

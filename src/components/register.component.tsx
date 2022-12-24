@@ -3,6 +3,7 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
 import AuthService from "../services/auth.service";
+import {redirect} from "react-router-dom";
 
 type Props = {};
 
@@ -84,7 +85,7 @@ export default class Register extends Component<Props, State> {
     ).then(
       response => {
         this.setState({
-          message: response.data.message,
+          message: "Вы успешно зарегистрировались!",//response.data.message,
           successful: true
         });
       },
